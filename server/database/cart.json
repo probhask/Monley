@@ -1,0 +1,34 @@
+{
+    "cart": [
+        {
+            "cartId": "2f5db565-c1f3-4f04-9246-0706a969eee9",
+            "custId": "c5c4572a-7c03-4306-9bdc-82cf5e825bcd",
+            "product": "005",
+            "color": "purple",
+            "size": "M",
+            "quantity": 2,
+            "totalPrice": 1200,
+            "createdTime": "5/31/2024, 9:38:29 AM"
+        },
+        {
+            "cartId": "2b8d84a7-1f93-4736-801b-c7bc2abed3c7",
+            "custId": "47ca08c6-a927-451f-954b-932e6112f619",
+            "product": "003",
+            "color": "grey",
+            "size": "XL",
+            "quantity": 9,
+            "totalPrice": 5454,
+            "createdTime": "5/31/2024, 9:39:03 AM"
+        },
+        {
+            "cartId": "687a527d-3de1-48b0-a982-71d0e4287a75",
+            "custId": "c5c4572a-7c03-4306-9bdc-82cf5e825bcd",
+            "product": "010",
+            "color": "purple",
+            "size": "XL",
+            "quantity": 4,
+            "totalPrice": 1600,
+            "createdTime": "6/6/2024, 2:25:18 PM"
+        }
+    ]
+}

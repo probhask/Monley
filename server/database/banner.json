@@ -1,0 +1,12 @@
+{
+    "banner": [
+        {
+            "productId": "001",
+            "image": "images/1.jpg",
+            "bannerId": "00t67",
+            "largeText": "Summer Sale",
+            "smallText": "Grab the biggest discount offers here",
+            "highlight": "20% - 30% OFF"
+        }
+    ]
+}

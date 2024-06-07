@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+.head-banner{
+    background: url(/images/slider_1.jpg) no-repeat ;
+    background-position:  top right -500px;
+    color: #ff0000;
+    background-color: #F8F8F8;
+}
+
+.men{
+    background: url(/images/12.jpg) no-repeat;
+    background-position: top left;
+}
+.women{
+    background: url(/images/84.jpg) no-repeat;
+    background-position: top -50px left;
+}
+.darkCart{
+    background: url(../public/images/emptyCartDark.png) no-repeat;
+}
+.lightCart{
+    background: url(../public/images/emptyCartLight2.png) no-repeat;
+}
+.defNone{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.defNone::-webkit-inner-spin-button{
+    appearance: none;
+}
