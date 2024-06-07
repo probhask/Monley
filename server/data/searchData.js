@@ -4,7 +4,6 @@ const fs = require("node:fs/promises");
 const path = require("node:path");
 const { getShortProduct } = require("../utils/functionality");
 const { fileURLToPath } = require("node:url");
-const { number } = require("yargs");
 
 const getSearch = async ({ searchTerm, page, limit, filter }) => {
   const startIndex = (Number(page) - 1) * limit;
