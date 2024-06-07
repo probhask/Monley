@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { CartItem } from "../../types";
+import { CartItem, UserInitailState } from "../../types";
 import axios from "axios";
 
 export const getCart = createAsyncThunk('cart/getCart', async (_,{getState}): Promise<CartItem[]> => {
-    const { user } = getState();
-    const custId = user.data.custId;
+    const { user } = getState() as{user:UserInitailState};
+    const custId = user.data && user.data.custId;
     // console.log(custId);
     
     try {
@@ -16,13 +16,15 @@ export const getCart = createAsyncThunk('cart/getCart', async (_,{getState}): Pr
         }
         return []
     } catch (error) {
-       throw new Error(`${error.message}`);
+        if(axios.isAxiosError(error))
+            throw new Error(`${error.message}`);
+        throw new Error(error as string)
     }
 })
 
 export const addToCart = createAsyncThunk('cart/addToCart', async ({ productId, color, size, quantity, totalPrice }: { productId: string; color: string; size: string; quantity: number;totalPrice:number },{getState}): Promise<CartItem[]> => {
-    const { user } = getState();
-    const custId = user.data.custId;
+     const { user } = getState() as{user:UserInitailState};
+    const custId = user.data && user.data.custId;
     // console.log(productId, color, quantity, totalPrice, size);
     try {
         
@@ -33,14 +35,16 @@ export const addToCart = createAsyncThunk('cart/addToCart', async ({ productId, 
         return response.data.cart;
         
     } catch (error) {
-        throw new Error(`${error.message}`)
+        if(axios.isAxiosError(error))
+            throw new Error(`${error.message}`);
+        throw new Error(error as string)
     }
     
 })
 export const removeFromCart = createAsyncThunk("cart/remove", async (cartId:string,{getState}) => {
     // console.log(cartId);
-    const { user } = getState();
-    const custId = user.data.custId;
+    const { user } = getState() as {user:UserInitailState};
+    const custId = user.data && user.data.custId;
      try {
         
         const response = await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/cart/remove`, {
@@ -50,7 +54,9 @@ export const removeFromCart = createAsyncThunk("cart/remove", async (cartId:stri
         return response.data.cart;
         
     } catch (error) {
-        throw new Error(`${error.message}`)
+       if(axios.isAxiosError(error))
+            throw new Error(`${error.message}`);
+        throw new Error(error as string)
     }
     
 })

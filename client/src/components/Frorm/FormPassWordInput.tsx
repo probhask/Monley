@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 type FormPassWordInputProps = {

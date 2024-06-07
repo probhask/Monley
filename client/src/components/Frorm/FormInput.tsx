@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { AiOutlineInfoCircle } from "react-icons/ai";
 
 type FormInputProps = {
   type: string;

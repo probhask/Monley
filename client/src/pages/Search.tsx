@@ -14,8 +14,8 @@ export const Search = () => {
     }
   }, []);
   return (
-    <div className="flex flex-col flex-wrap justify-center items-center my-5">
-      <SearchBar mb={20} />
+    <div className="flex flex-col flex-wrap justify-center items-center my-5 gap-y-2">
+      <SearchBar />
 
       {/* filter */}
       <FilterSearch />

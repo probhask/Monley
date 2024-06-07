@@ -11,7 +11,8 @@ const orderRouter = require("./router/orderRouter");
 const app = express();
 
 const corsOptiions = {
-  origin: "http://localhost:5173",
+  // origin: "http://localhost:5173",
+  origin: "https://stalwart-gingersnap-d7573f.netlify.app/",
   method: "GET,POST,PUT,DELETE,PATCH,HEAD ",
   credentials: true,
 };

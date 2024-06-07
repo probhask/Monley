@@ -4,7 +4,7 @@ import {  productInitialState, ProductShort } from "../../types";
 import toast from "react-hot-toast";
 
 export const getItems = createAsyncThunk('getItems', async (_, { getState }): Promise<ProductShort[]> => {
-  const { product } = getState();
+  const { product } = getState() as {product:productInitialState};
   const pageNumber = product.pageNumber;
   // console.log("page", pageNumber);
   try {

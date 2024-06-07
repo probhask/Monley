@@ -1,11 +1,11 @@
 import useSearchItemNavigate from "../../hooks/useSearchItemNavigate";
 import SearchInputForm from "./SearchInputForm";
-import { useNavigate } from "react-router-dom";
-import SearchSuggestion from "./SearchSuggestion";
+// import { useNavigate } from "react-router-dom";
+// import SearchSuggestion from "./SearchSuggestion";
 
-const SearchBar = ({ mb, mt }: { mb?: number; mt?: number }) => {
+const SearchBar = () => {
   const { setSearchTerm, search, getSearchTerm } = useSearchItemNavigate();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -14,13 +14,13 @@ const SearchBar = ({ mb, mt }: { mb?: number; mt?: number }) => {
     }
   };
 
-  const handleSuggestionClick = (productId: string) => {
-    navigate(`/shop/product/${productId}`);
-  };
+  // const handleSuggestionClick = (productId: string) => {
+  //   navigate(`/shop/product/${productId}`);
+  // };
 
   return (
     <div
-      className={`bg-gray-400 w-[80%] md:w-[60%] lg-w[50%] flex flex-col justify-center relative mb-[${mb}px]`}
+      className={`bg-gray-400 w-[80%] md:w-[60%] lg-w[50%] flex flex-col justify-center relative my-3`}
     >
       <SearchInputForm
         value={getSearchTerm()}

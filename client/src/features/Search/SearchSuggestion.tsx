@@ -20,6 +20,8 @@ const SearchSuggestion = ({
   const [loading, setLoading] = useState<boolean>(false);
 
   const fetchSuggestion = async () => {
+    console.log("l", loading);
+
     setLoading(true);
     setError("");
     try {

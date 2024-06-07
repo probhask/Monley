@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { User, UserAllDetail, UserInitailState } from "../../types";
+import {  UserAllDetail, UserInitailState } from "../../types";
 import axios from "axios";
 import toast from "react-hot-toast";
 

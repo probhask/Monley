@@ -3,7 +3,7 @@ type ButtonProps = {
   text: string;
   classes: string;
   disabled?: boolean;
-  onclick: () => void;
+  onclick?: () => void;
 };
 
 const Button = ({

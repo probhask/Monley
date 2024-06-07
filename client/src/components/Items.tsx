@@ -32,10 +32,10 @@ const Items = forwardRef<HTMLDivElement, itemsProps>(
               </div>
             )}
             <div className="flex text-xl justify-end items-center">
-              {[...Array(item.rating.stars)].map((e, i) => {
+              {[...Array(item.rating.stars)].map((_, i) => {
                 return <AiFillStar key={i} className="text-yellow-400" />;
               })}
-              {[...Array(5 - item.rating.stars)].map((e, i) => {
+              {[...Array(5 - item.rating.stars)].map((_, i) => {
                 return <AiOutlineStar key={i} className="text-yellow-400" />;
               })}
             </div>

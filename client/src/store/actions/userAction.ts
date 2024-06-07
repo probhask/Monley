@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { User, UserDetail, UserInitailState } from "../../types";
+import {  UserDetail, UserInitailState } from "../../types";
 
 export const loginUser = createAsyncThunk('user/loginUser', async ({ email, password }: { email: string; password: string }): Promise<UserDetail> => {
     try {
@@ -41,9 +41,6 @@ export const createUser = createAsyncThunk('user/createUser', async ({ name, ema
 export const changeTheme = createAsyncThunk("user/changeTheme", async (_, { getState }): Promise<{darKMode:boolean}> => {
     const { user } = getState() as {user:UserInitailState};
     const custId = user.data?.custId ;
-    // console.log("cust",user);
-    
-
     try {
         const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/user/changeMode`, {
             params:{custId}
@@ -58,11 +55,9 @@ export const changeTheme = createAsyncThunk("user/changeTheme", async (_, { getS
         return darkMode
     } catch (error) {
         if (axios.isAxiosError(error)) {
-            // console.log(error);
         throw new Error(`${error.message}`);
         } else {
         throw new Error(`${error}`);
-            
         }
         
     }

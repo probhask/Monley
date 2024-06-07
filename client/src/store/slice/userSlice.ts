@@ -105,10 +105,10 @@ const userSlice = createSlice({
           localStorage.setItem("monleyUser", JSON.stringify(newData));
         }
       })
-      .addCase(changeTheme.rejected, (state, action) => {
-        if (action.error.message) {
-          toast.error(action.error.message);
-        }
+      .addCase(changeTheme.rejected, (action) => {
+        console.log(action);
+        
+        toast.error("change theme fail")
       });
   },
 });
