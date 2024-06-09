@@ -1,11 +1,8 @@
-const { log } = require("node:console");
-const { readFile, readFileSync } = require("node:fs");
 const fs = require("node:fs/promises");
 const path = require("node:path");
-const { getShortProduct } = require("../utils/functionality");
-const { fileURLToPath } = require("node:url");
 
 const getSearch = async ({ searchTerm, page, limit, filter }) => {
+  searchTerm = searchTerm.toLowerCase();
   const startIndex = (Number(page) - 1) * limit;
   const endIndex = startIndex + Number(limit);
   const rawFileContent = await fs.readFile(
@@ -18,8 +15,8 @@ const getSearch = async ({ searchTerm, page, limit, filter }) => {
   const data = JSON.parse(rawFileContent);
   const searchData = data.products.filter((product) => {
     if (
-      product.item_name.toLocaleLowerCase().includes(searchTerm) ||
-      product.description.toLocaleLowerCase().includes(searchTerm) ||
+      product.item_name.toLowerCase().includes(searchTerm) ||
+      product.description.toLowerCase().includes(searchTerm) ||
       product.collection.toLowerCase().includes(searchTerm) ||
       product.category.toLowerCase().includes(searchTerm) ||
       product.gender.includes(searchTerm) ||
@@ -63,6 +60,7 @@ const getSearch = async ({ searchTerm, page, limit, filter }) => {
 };
 
 const getSearchSuggestion = async ({ searchTerm }) => {
+  searchTerm = searchTerm.toLowerCase();
   const rawFileContent = await fs.readFile(
     path.join(__dirname, "../database/products.json"),
     {
@@ -72,16 +70,7 @@ const getSearchSuggestion = async ({ searchTerm }) => {
 
   const data = JSON.parse(rawFileContent);
   const searchData = data.products.filter((product) => {
-    if (
-      product.item_name.toLocaleLowerCase().includes(searchTerm) ||
-      product.description.toLocaleLowerCase().includes(searchTerm) ||
-      product.collection.toLowerCase().includes(searchTerm) ||
-      product.category.toLowerCase().includes(searchTerm) ||
-      product.gender.includes(searchTerm) ||
-      product.keyword.includes(searchTerm) ||
-      product.color.includes(searchTerm)
-    )
-      return product;
+    if (product.item_name.toLowerCase().includes(searchTerm)) return product;
   });
   const suggestiondata = searchData.map((data) => {
     return { productId: data.productId, item_name: data.item_name };

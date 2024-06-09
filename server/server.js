@@ -10,16 +10,25 @@ const orderRouter = require("./router/orderRouter");
 
 const app = express();
 
-const corsOptiions = {
-  // origin: "http://localhost:5173",
-  origin: "https://stalwart-gingersnap-d7573f.netlify.app/",
-  method: "GET,POST,PUT,DELETE,PATCH,HEAD ",
-  credentials: true,
-};
+// const corsOptiions = {
+//   // origin: "http://localhost:5173",
+//   origin: "https://stalwart-gingersnap-d7573f.netlify.app",
+//   method: "GET,POST,PUT,DELETE,PATCH,HEAD ",
+//   credentials: true,
+// };
 
 app.use(bodyParser.json());
 
-app.use(cors(corsOptiions));
+// app.use(cors(corsOptiions));
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,POST,PUT,DELETE,PATCH,HEAD"
+  );
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
 app.use("/items", itemRouter);
 app.use("/banner", bannerRouter);
