@@ -5,6 +5,22 @@
 .hide-scrollbar::-webkit-scrollbar{
     display: none;
 }
+.customScrollBar::-webkit-scrollbar{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    scroll-behavior: smooth;
+}
+.customScrollBar::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+.customScrollBar::-webkit-scrollbar-thumb{
+
+    background: orange;
+}
+.customScrollBar::-webkit-scrollbar-track{
+    background: #555;
+}
 .head-banner{
     background: url(/images/slider_1.jpg) no-repeat ;
     background-position:  top right -500px;

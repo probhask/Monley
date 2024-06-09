@@ -139,6 +139,9 @@ export type OrderInitialState = {
   isError: string;
   isLoading: boolean;
 }
+export type Suggestion = {
+   productId: string; item_name: string 
+}
 
 export const orderFormValidationSchema = z.object({
   name: z.string({ required_error: 'name is required' }).trim().min(5, { message: "must minimum contain 5 letters " }),

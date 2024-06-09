@@ -1,4 +1,5 @@
 import React, { ErrorInfo } from "react";
+import { Link } from "react-router-dom";
 type Props = {
   children: React.ReactNode;
 };
@@ -19,7 +20,17 @@ class ErrorBoundary extends React.Component<Props, State> {
 
   render(): React.ReactNode {
     if (this.state.hasError) {
-      return <div>Found an error !</div>;
+      return (
+        <div className="text-2xl md:text-4xl font-semibold my-10 text-center flex flex-col items-center justify-center gap-y-5">
+          <p> Something went Wrong !</p>
+          <a
+            href="/"
+            className="px-2 py-0.5 bg-orange-400 text-white font-semibold mt-5"
+          >
+            GO Back to HomePage
+          </a>
+        </div>
+      );
     } else {
       return this.props.children;
     }

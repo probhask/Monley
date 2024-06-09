@@ -6,12 +6,18 @@ type SearchInputFormProps = {
   value: string;
   setValue: (val: string) => void;
   onSubmitFunc: (e: React.FormEvent<HTMLFormElement>) => void;
+  onFocus: () => void;
+  onBlur: () => void;
+  onKeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 
 const SearchInputForm = ({
   onSubmitFunc,
+  onKeyUp,
   setValue,
   value,
+  onFocus,
+  onBlur,
 }: SearchInputFormProps) => {
   return (
     <form className="max-w-full" onSubmit={onSubmitFunc}>
@@ -19,14 +25,17 @@ const SearchInputForm = ({
         <div className="flex items-center border-2  px-4 bg-white  w-full">
           <input
             type="text"
+            name="search"
             value={value}
+            className="outline-none focus:outline-none px-2 text-gray-600 font-semibold w-full"
+            placeholder="search here..."
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setValue(e.target.value);
             }}
             autoComplete="off"
-            placeholder="search here..."
-            name="search"
-            className="outline-none focus:outline-none px-2 text-gray-600 font-semibold w-full"
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onKeyUp={onKeyUp}
           />
           {value && (
             <AiOutlineClose

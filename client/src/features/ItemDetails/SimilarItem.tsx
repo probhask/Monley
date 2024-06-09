@@ -25,8 +25,7 @@ const SimilarItem = () => {
   };
 
   useEffect(() => {
-    const promise = dispatch(getSimilarItems());
-    return () => promise.abort();
+    dispatch(getSimilarItems());
   }, []);
 
   if (similarItemsLoading) return <LoadingSpinner />;

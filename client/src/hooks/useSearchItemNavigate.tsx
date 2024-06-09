@@ -33,6 +33,8 @@ const useSearchItemNavigate = (): UseSearchItemNavigateReturnType => {
   };
 
   const getSearchData = (): void => {
+    console.log("get serac called");
+
     if (Number(window.location.search.slice(1).split("=")[2])) {
       const query = window.location.search.slice(1).split("=")[1].split("&")[0];
       // const page = Number(window.location.search.slice(1).split("=")[2]);
