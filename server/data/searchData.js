@@ -72,10 +72,9 @@ const getSearchSuggestion = async ({ searchTerm }) => {
   const searchData = data.products.filter((product) => {
     if (product.item_name.toLowerCase().includes(searchTerm)) return product;
   });
-  const suggestiondata = searchData.map((data) => {
+  const suggestiondata = searchData.slice(0, 4).map((data) => {
     return { productId: data.productId, item_name: data.item_name };
   });
-  // console.log("search data", suggestiondata);
   return suggestiondata || [];
 };
 

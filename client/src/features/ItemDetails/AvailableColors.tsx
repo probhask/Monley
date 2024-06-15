@@ -13,7 +13,7 @@ const AvailableColors = () => {
       </div>
       {itemDetail && itemDetail[0] && (
         <div className="flex gap-x-2 flex-wrap gap-y-2">
-          {itemDetail[0]?.color.map((color, index) => (
+          {itemDetail[0]?.color?.map((color, index) => (
             <ChooseItem
               key={index}
               item={color}

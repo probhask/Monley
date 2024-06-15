@@ -23,7 +23,7 @@ export const getUserOrderList = createAsyncThunk('getUserOrderList', async (_,{g
     const custId = user.data?.custId;
     try {
         const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/order/userOrder`, {params: {custId}})
-        console.log("order donew",response.data);
+        // console.log("order donew",response.data);
         return response.data.order as Order[]
         
     } catch (e) {

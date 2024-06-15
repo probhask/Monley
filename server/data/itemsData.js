@@ -25,12 +25,9 @@ const getItems = async ({ page, limit }) => {
     shortData = Array.from(data.products)
       .slice(startIndex, endIndex)
       .map((product, index) => {
-        // console.log("product", product);
         return getShortProduct(product);
       });
   }
-
-  // const storedItems = data ?? [];
   const storedItems = shortData ?? [];
   return storedItems;
 };
@@ -41,13 +38,10 @@ const getItemDetail = async ({ itemId }) => {
       encoding: "utf-8",
     }
   );
-  // console.log("st", toString(56));
   const data = JSON.parse(rawFileContent);
-  // console.log(data);
   const matchProduct = data.products.filter((product) => {
     return product.productId === itemId;
   });
-  // console.log("match", matchProduct);
   return matchProduct;
 };
 
@@ -72,7 +66,6 @@ const getFeatured = async () => {
       .filter((item) => item !== undefined);
   }
 
-  // const storedItems = data ?? [];
   const storedItems = shortData ?? [];
   return storedItems;
 };
@@ -88,8 +81,6 @@ const getNewArrival = async () => {
   if (data) {
     shortData = data.products
       .map((product, index) => {
-        // console.log("product", product);
-        // console.log("diff2", dateDiff(new Date(product.createdAt), new Date()));
         if (dateDiff(new Date(product.createdAt), new Date()) < 20) {
           return getShortProduct(product);
         }
@@ -98,7 +89,6 @@ const getNewArrival = async () => {
       .slice(0, 10);
   }
 
-  // const storedItems = data ?? [];
   const storedItems = shortData ?? [];
   return storedItems;
 };
@@ -117,7 +107,6 @@ const getBestSeller = async () => {
       .reverse()
       .filter((item) => item !== undefined);
   }
-  // console.log(shortData[0].productId);
 
   let shortData = bestSeller
     .map((item) => {
@@ -125,7 +114,6 @@ const getBestSeller = async () => {
     })
     .slice(0, 6);
 
-  // const storedItems = data ?? [];
   const storedItems = shortData ?? [];
   return storedItems;
 };

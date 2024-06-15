@@ -33,7 +33,6 @@ itemRouter
     res.status(200).json({ items: items });
   })
   .put("/rating", async (req, res) => {
-    // console.log(req.body.params);
     const ratings = await giveRatings(req.body.params);
   })
   .get("/similar", async (req, res) => {

@@ -4,11 +4,12 @@ import SearchInputForm from "./SearchInputForm";
 import SearchSuggestion from "./SearchSuggestion";
 import { useNavigate } from "react-router-dom";
 import { Suggestion } from "../../types";
-import { useCallback, useEffect, useRef, useState } from "react";
-import toast from "react-hot-toast";
+import { useEffect, useRef, useState } from "react";
 
 const SearchBar = () => {
   const { setSearchTerm, search, getSearchTerm } = useSearchItemNavigate();
+
+  const [inputTerm, setInputTerm] = useState<string>(getSearchTerm());
   const [displaySuggestion, setDisplaySuggestion] = useState<boolean>(false);
   const [selectedSuggestion, setSelectedSuggestion] = useState<number>(-1);
   const suggestionRef = useRef<HTMLDivElement>(null);
@@ -17,24 +18,19 @@ const SearchBar = () => {
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
-  const staticData: Suggestion[] = useCallback(
-    JSON.parse(localStorage.getItem("monleySuggestion") as string) || [],
-    [search]
-  );
 
+  // show suggestion
   const viewSuggesstion = () => {
-    if (getSearchTerm().length > 0) {
+    if (inputTerm.length > 0) {
       setDisplaySuggestion(true);
     }
   };
+  // hide suggestion
   const hideSuggesstion = () => {
     setDisplaySuggestion(false);
   };
-
+  // key navigation
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // console.log(e);
-    // console.log(suggestionRef.current?.clientHeight);
-
     if (selectedSuggestion < suggestion.length) {
       if (e.key === "ArrowUp" && selectedSuggestion > 0) {
         setSelectedSuggestion((prev) => prev - 1);
@@ -46,67 +42,48 @@ const SearchBar = () => {
       } else if (e.key === "Enter" && selectedSuggestion >= 0) {
         if (selectedSuggestion > -1) {
           setSearchTerm(suggestion[selectedSuggestion].item_name);
-          handleSuggestionClick(suggestion[selectedSuggestion].item_name);
+          handleSuggestionClick(suggestion[selectedSuggestion].productId);
 
-          setDisplaySuggestion(false);
+          hideSuggesstion();
         }
       } else if (e.key === "Escape") {
-        setDisplaySuggestion(false);
+        hideSuggesstion();
       }
     } else {
       setSelectedSuggestion(-1);
     }
   };
+  // input term search
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (getSearchTerm().length >= 1) {
+    if (inputTerm.length >= 1) {
+      setSearchTerm(inputTerm);
       search();
-      setDisplaySuggestion(false);
+      hideSuggesstion();
     }
   };
   const onInputChnage = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-    setDisplaySuggestion(true);
+    setInputTerm(e.target.value);
+    viewSuggesstion();
+  };
+  const handleSuggestionClick = (productId: string) => {
+    navigate(`/shop/product/${productId}`);
   };
 
-  const fetchSuggestion = async (query: string): Promise<Suggestion[]> => {
-    const response = await axios.get(
-      `${import.meta.env.VITE_BACKEND_URL}/search/suggestion`,
-      {
-        params: { searchTerm: query },
-      }
-    );
-
-    const suggestion = response.data.search as Suggestion[];
-    if (suggestion) {
-      localStorage.setItem("monleySuggestion", JSON.stringify(suggestion));
-    }
-    return suggestion;
-  };
-
-  const handleSuggestionClick = (item_name: string) => {
-    search();
-    // navigate(`/shop/product/${productId}`);
-  };
-
-  const fetchSuggestionFunc = async () => {
+  const fetchSuggestion = async (query: string): Promise<void> => {
     setLoading(true);
     setError("");
     try {
-      let result;
-      if (staticData && staticData.length > 0) {
-        result = staticData.filter((item) => {
-          return item.item_name
-            .toLowerCase()
-            .includes(getSearchTerm().toLowerCase());
-        });
-      } else if (fetchSuggestion) {
-        result = await fetchSuggestion(getSearchTerm());
-      }
-      // console.log("resp", result);
-      setSuggestions(result || []);
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/search/suggestion`,
+        {
+          params: { searchTerm: query },
+        }
+      );
+
+      const suggestion = (await response.data.search) as Suggestion[];
+      setSuggestions(suggestion || []);
     } catch (error) {
-      if (axios.isAxiosError(error)) setError(error.message);
       setError(error as string);
     } finally {
       setLoading(false);
@@ -114,48 +91,43 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
-
-  useEffect(() => {
     const timeID = setTimeout(() => {
-      if (getSearchTerm().length > 0) {
-        fetchSuggestionFunc();
+      if (inputTerm.length > 0) {
+        fetchSuggestion(inputTerm);
       } else {
         setSuggestions([]);
       }
-    }, 300);
+    }, 500);
     return () => clearInterval(timeID);
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getSearchTerm()]);
+  }, [inputTerm]);
+
   useEffect(() => {
-    setDisplaySuggestion(false);
-  }, []);
+    setInputTerm(getSearchTerm());
+  }, [getSearchTerm()]);
 
   return (
     <div
-      className={`bg-gray-400 w-[80%] md:w-[60%] lg-w[50%] flex flex-col justify-center relative my-3`}
+      className={`bg-gray-100 w-[80%] md:w-[60%] lg-w[50%] flex flex-col justify-center relative my-3`}
     >
       <SearchInputForm
-        value={getSearchTerm()}
-        setValue={setSearchTerm}
+        value={inputTerm}
+        setValue={onInputChnage}
         onSubmitFunc={handleSearch}
         onKeyUp={handleKey}
         onFocus={viewSuggesstion}
         onBlur={hideSuggesstion}
       />
-      {getSearchTerm() && displaySuggestion && (
+      {inputTerm && displaySuggestion && (
         <SearchSuggestion
           selectedSuggestion={selectedSuggestion}
           suggestions={suggestion}
-          highLighText={getSearchTerm()}
+          highLighText={inputTerm}
           onSelect={handleSuggestionClick}
           ref={suggestionRef}
         />
       )}
+      {loading && <div className="mx-auto">loading..</div>}
     </div>
   );
 };

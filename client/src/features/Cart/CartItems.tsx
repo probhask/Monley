@@ -41,8 +41,8 @@ const CartItems = ({ cart }: { cart: CartItem }): JSX.Element => {
     }
   };
   return (
-    <div className="flex justify-between px-2 py-2 gap-x-1">
-      <div className="flex w-[45%] md:w-[40%] lg:w-[30%] overflow-x-clip">
+    <div className="flex justify-between items-center px-2 py-2 gap-x-1">
+      <div className="flex items-center w-[45%] md:w-[40%] lg:w-[30%] overflow-x-clip">
         <div className="flex justify-center items-center w-8 h-8 md:h-10 md:w-10 m bg-gray-200 mr-2">
           <img
             src={cart.product.image[0]}

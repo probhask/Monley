@@ -4,7 +4,7 @@ import { ProductDeatils, UserInitailState } from "../../types";
 import toast from "react-hot-toast";
 
 export const getItemsDetail = createAsyncThunk(
-  "getItems",
+  "getItemsDetail",
   async (itemId: string): Promise<ProductDeatils[]> => {
     try {
       const response = await axios.get(
@@ -73,8 +73,6 @@ export const getSimilarItems = createAsyncThunk(
           params: { collection, category,productId,gender },
         }
       );
-      // console.log(response.data.items);
-
       return response.data.items;
     } catch (error) {
      if(axios.isAxiosError(error))
@@ -130,7 +128,7 @@ const productDetailSlice = createSlice({
         state.isLoading = false;
         state.isError = action.error.message;
         state.notFound = false;
-        toast.error(action.error.message as string);
+        // toast.error(action.error.message as string);
       })
       .addCase(getSimilarItems.pending, (state) => {
         state.similarLoading = true;
@@ -151,7 +149,7 @@ const productDetailSlice = createSlice({
         state.similarLoading = false;
         state.similarNotFound = false;
         state.isError = action.error.message;
-        toast.error(action.error.message as string);
+        // toast.error(action.error.message as string);
       })
   },
 });

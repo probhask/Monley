@@ -1,10 +1,9 @@
 import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
 import { IoMdSearch } from "react-icons/io";
 
 type SearchInputFormProps = {
   value: string;
-  setValue: (val: string) => void;
+  setValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmitFunc: (e: React.FormEvent<HTMLFormElement>) => void;
   onFocus: () => void;
   onBlur: () => void;
@@ -29,20 +28,18 @@ const SearchInputForm = ({
             value={value}
             className="outline-none focus:outline-none px-2 text-gray-600 font-semibold w-full"
             placeholder="search here..."
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setValue(e.target.value);
-            }}
+            onChange={setValue}
             autoComplete="off"
             onFocus={onFocus}
             onBlur={onBlur}
             onKeyUp={onKeyUp}
           />
-          {value && (
+          {/* {value && (
             <AiOutlineClose
               className="text-black cursor-pointer"
               onClick={() => setValue("")}
             />
-          )}
+          )} */}
         </div>
         <button
           type="submit"

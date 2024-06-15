@@ -29,15 +29,15 @@ const Profile = () => {
       <div className="flex justify-center items-center w-full px-5 py-5">
         <div className="flex flex-col w-full">
           <div className="flex flex-col items-center gap-x-6 my-5 justify-center">
-            <div className="w-20 h-20 bg-gray-200 rounded-full overflow-hidden">
+            <div className="w-28 h-28 bg-gray-200 rounded-full overflow-hidden">
               {detailUser.image ? (
                 <img src={detailUser?.image} alt="" />
               ) : (
                 <IoMdPerson className="w-full h-full" />
               )}
             </div>
-            <div className=" flex flex-col gap-y-3 items-center text-lg">
-              <div className="font-bold">{detailUser.name}</div>
+            <div className=" flex flex-col gap-y-3 items-center text-lg mt-5">
+              <div className="font-bold text-4xl">{detailUser.name}</div>
               <div>{detailUser.email}</div>
               <div>{detailUser.address}</div>
             </div>

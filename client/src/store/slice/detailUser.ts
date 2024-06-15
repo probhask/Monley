@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
   export const getDetailUser = createAsyncThunk("", async (_, { getState }) => {
     const { user } = getState() as { user: UserInitailState };
       const custId = user.data?.custId;
-      console.log("c",custId);
+      // console.log("c",custId);
       
     try {
       const response = await axios.post(
@@ -18,7 +18,7 @@ import toast from "react-hot-toast";
         throw new Error("no data Found");
       }
       const user: UserAllDetail = response.data.user[0];
-      console.log("user", user);
+      // console.log("user", user);
 
       return user;
     } catch (error) {

@@ -37,16 +37,8 @@ const Cart = () => {
         className={`w-full h-full flex items-center justify-center px-2 md:px-5`}
       >
         <div className="flex flex-col items-center w-full gap-y-8 my-5">
-          {/* <div>
-            Total Items: <span>{totalItemsQuantity}</span>
-          </div> */}
           {/* items */}
           <div className="flex flex-col w-[100%] md:w-[80%] lg:w-[70%]">
-            {/* <div className="flex justify-between items-center bg-black dark:bg-slate-700 text-white dark:text-white px-2 py-1 w-full">
-              <div>ITEM</div>
-              <div>QUANTITY</div>
-              <div>PRICE</div>
-            </div> */}
             <div className="flex justify-center items-center bg-black dark:bg-slate-700 text-white dark:text-white px-2 py-1 w-full mb-5">
               CART
             </div>
@@ -54,15 +46,6 @@ const Cart = () => {
               <CartItems cart={cart} key={index} />
             ))}
           </div>
-          {/* total */}
-          {/* <div
-            className="flex flex-col w-full justify-center items-center"
-            onClick={handleBuyAllCart}
-          >
-            <button className="h-10 w-[80%] md:w-[60%] lg:w-[40%] flex justify-center items-center border border-orange-500 text-orange-500 px-2 py-0.5 rounded-md hover:bg-orange-500 hover:text-white font-semibold text-xl shadow-inner">
-              Total Pay:<span>{grandPay}</span>
-            </button>
-          </div> */}
         </div>
       </div>
     );
