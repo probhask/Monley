@@ -89,6 +89,11 @@ const SearchBar = () => {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    if (error) {
+      console.error(error);
+    }
+  }, [error]);
 
   useEffect(() => {
     const timeID = setTimeout(() => {
