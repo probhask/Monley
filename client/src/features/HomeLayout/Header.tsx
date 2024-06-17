@@ -114,7 +114,7 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
           className="rounded-full bg-gray-100 w-6 h-6 md:w-8 md:h-8 hidden md:flex items-center justify-center dark:bg-slate-600 cursor-pointer"
           onClick={changeThemeMode}
         >
-          {!darkMode ? (
+          {darkMode ? (
             <AiFillSun className="text-yellow-400" />
           ) : (
             <AiFillMoon className="text-white" />

@@ -76,7 +76,7 @@ const SideBar = ({ setToggleSideBar }: SideBarProps) => {
           className=" flex items-center cursor-pointer py-4 border-b-2  pl-3 "
           onClick={changeThemeMode}
         >
-          {!darkMode ? (
+          {darkMode ? (
             <AiFillSun className="text-yellow-200 text-2xl" />
           ) : (
             <AiFillMoon className="text-white text-2xl" />
