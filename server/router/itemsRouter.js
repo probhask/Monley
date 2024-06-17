@@ -36,7 +36,7 @@ itemRouter
     const ratings = await giveRatings(req.body.params);
   })
   .get("/similar", async (req, res) => {
-    console.log(req.query);
+    // console.log(req.query);
     const items = await getSimilar(req.query);
     res.status(200).json({ items: items });
   });

@@ -21,12 +21,12 @@ const orderProduct = async (body) => {
     ...body,
     createdTime: new Date().toLocaleString(),
   };
-  console.log("order", orderData);
+  // console.log("order", orderData);
   const newData = [...orderData.order, doc];
 
   fs.writeFile(
     path.join(__dirname, "../database/order.json"),
-    JSON.stringify({ order: newData || [] })
+    JSON.stringify({ order: newData })
   );
 
   const rawFileContent = await fs.readFile(
@@ -61,7 +61,7 @@ const getUserOrder = async ({ custId }) => {
   const UserData = Array.from(orderData.order).filter(
     (order) => order.custId === custId
   );
-  console.log(UserData);
+  // console.log(UserData);
   return UserData || [];
 };
 exports.orderProduct = orderProduct;
