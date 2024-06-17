@@ -81,7 +81,7 @@ const SideBar = ({ setToggleSideBar }: SideBarProps) => {
           ) : (
             <AiFillMoon className="text-white text-2xl" />
           )}
-          <p>{!darkMode ? "Light Mode" : "Dark Mode"}</p>
+          <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
         </div>
         <NavLink
           to="/"
