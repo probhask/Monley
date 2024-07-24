@@ -6,7 +6,6 @@ import { CartItems } from "../features";
 
 const Cart = () => {
   const dispatch = useAppDispatch();
-  const custId = useAppSelector((state) => state.user.data?.custId);
   const darkMode = useAppSelector((state) => state.user.darkMode);
   const cartItem = useAppSelector((state) => state.cart.data);
   const cartLoading = useAppSelector((state) => state.cart.isLoading);

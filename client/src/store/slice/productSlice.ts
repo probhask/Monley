@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { productInitialState, ProductShort } from "../../types";
-import toast from "react-hot-toast";
 
 export const getItems = createAsyncThunk(
   "getItems",
