@@ -13,19 +13,18 @@ const SimilarItem = () => {
 
   const prevBtn = () => {
     if (box.current) {
-      const width = box.current?.clientWidth;
-      box.current.scrollLeft = box.current?.scrollLeft - width;
+      box.current.scrollLeft = box.current?.scrollLeft - 250;
     }
   };
   const nextBtn = () => {
     if (box.current) {
-      const width = box.current?.clientWidth;
-      box.current.scrollLeft = box.current?.scrollLeft + width;
+      box.current.scrollLeft = box.current?.scrollLeft + 250;
     }
   };
 
   useEffect(() => {
-    dispatch(getSimilarItems());
+    const id = dispatch(getSimilarItems());
+    return () => id.abort();
   }, []);
 
   if (similarItemsLoading) return <LoadingSpinner />;
@@ -40,14 +39,14 @@ const SimilarItem = () => {
             <div className=" flex items-center justify-center w-full md:w-[80%] lg:w-[70%]">
               <div className=" flex relative overflow-hidden p-2">
                 <button
-                  className="absolute top-[50%] translate-y-[-50%] left-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]  border-none shadow-md z-20"
+                  className="absolute top-[50%] translate-y-[-50%] left-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]  border-none shadow-md z-20 hover:bg-black hover:text-white active:scale-90 transition-all"
                   onClick={prevBtn}
                 >
                   <AiOutlineLeft />
                 </button>
 
                 <div
-                  className=" flex items-center overflow-hidden  scroll-smooth hide-scrollbar gap-x-2"
+                  className=" flex items-center overflow-hidden overflow-x-auto  scroll-smooth hide-scrollbar gap-x-2"
                   ref={box}
                 >
                   {similarItems.length > 0 &&
@@ -57,7 +56,7 @@ const SimilarItem = () => {
                 </div>
 
                 <button
-                  className="absolute top-[50%] translate-y-[-50%] right-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]   border-none shadow-md z-20"
+                  className="absolute top-[50%] translate-y-[-50%] right-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]   border-none shadow-md z-20 hover:bg-black hover:text-white active:scale-90 transition-all"
                   onClick={nextBtn}
                 >
                   <AiOutlineRight />

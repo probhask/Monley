@@ -4,7 +4,8 @@ import SearchInputForm from "./SearchInputForm";
 import SearchSuggestion from "./SearchSuggestion";
 import { useNavigate } from "react-router-dom";
 import { Suggestion } from "../../types";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import useDetectOutSideClick from "../../hooks/useDetectOutSideClick";
 
 const SearchBar = () => {
   const { setSearchTerm, search, getSearchTerm } = useSearchItemNavigate();
@@ -29,6 +30,8 @@ const SearchBar = () => {
   const hideSuggesstion = () => {
     setDisplaySuggestion(false);
   };
+  const detectOtsideClick = useDetectOutSideClick(hideSuggesstion);
+
   // key navigation
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (selectedSuggestion < suggestion.length) {
@@ -41,9 +44,8 @@ const SearchBar = () => {
         setSelectedSuggestion((prev) => prev + 1);
       } else if (e.key === "Enter" && selectedSuggestion >= 0) {
         if (selectedSuggestion > -1) {
-          setSearchTerm(suggestion[selectedSuggestion].item_name);
+          // setSearchTerm(suggestion[selectedSuggestion].item_name);
           handleSuggestionClick(suggestion[selectedSuggestion].productId);
-
           hideSuggesstion();
         }
       } else if (e.key === "Escape") {
@@ -66,9 +68,10 @@ const SearchBar = () => {
     setInputTerm(e.target.value);
     viewSuggesstion();
   };
-  const handleSuggestionClick = (productId: string) => {
+
+  const handleSuggestionClick = useCallback((productId: string) => {
     navigate(`/shop/product/${productId}`);
-  };
+  }, []);
 
   const fetchSuggestion = async (query: string): Promise<void> => {
     setLoading(true);
@@ -114,6 +117,7 @@ const SearchBar = () => {
   return (
     <div
       className={`bg-gray-100 w-[80%] md:w-[60%] lg-w[50%] flex flex-col justify-center relative my-3`}
+      ref={detectOtsideClick}
     >
       <SearchInputForm
         value={inputTerm}
@@ -121,7 +125,6 @@ const SearchBar = () => {
         onSubmitFunc={handleSearch}
         onKeyUp={handleKey}
         onFocus={viewSuggesstion}
-        onBlur={hideSuggesstion}
       />
       {inputTerm && displaySuggestion && (
         <SearchSuggestion

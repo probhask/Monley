@@ -48,7 +48,7 @@ const SearchSuggestion = forwardRef<HTMLDivElement, SearchSuggestionProps>(
               return (
                 <li
                   key={index}
-                  className={`text-base text h-9 cursor-pointer px-3 text-black ${
+                  className={`text-base text h-9 cursor-pointer px-3 text-black hover:bg-gray-200 ${
                     selectedSuggestion === index ? "bg-gray-200" : ""
                   }`}
                   onClick={() => onSelect(suggestion.productId)}

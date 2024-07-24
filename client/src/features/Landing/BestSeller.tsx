@@ -1,15 +1,30 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getBestSeller } from "../../store/slice/bestSellerItems";
-import { Items } from "../../components";
+import { Items, ItemShimmer } from "../../components";
 
 const BestSeller = () => {
-  const newArrival = useAppSelector((state) => state.bestSeller.data);
+  const bestSeller = useAppSelector((state) => state.bestSeller.data);
+  const bestSellerLoading = useAppSelector(
+    (state) => state.bestSeller.isLoading
+  );
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(getBestSeller());
+    const dispatchId = dispatch(getBestSeller());
+    return () => dispatchId.abort();
   }, []);
+
+  if (bestSellerLoading) {
+    return (
+      <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
+        {[1, 2, 3, 4].map(() => (
+          <ItemShimmer />
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center mb-10 ">
@@ -17,8 +32,8 @@ const BestSeller = () => {
         <div className="w-12 h-0.5 bg-[#ff0000]"></div>
       </div>
       <div className="flex flex-wrap justify-center md:gap-x-10">
-        {newArrival &&
-          newArrival.map((item, index) => <Items item={item} key={index} />)}
+        {bestSeller &&
+          bestSeller.map((item, index) => <Items item={item} key={index} />)}
       </div>
     </div>
   );

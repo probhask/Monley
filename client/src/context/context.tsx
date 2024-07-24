@@ -126,8 +126,6 @@ export const MonleyContextProvider = ({
     setSessionStorage<string>("cartId", "");
   };
   const handleAddCart = (product: ProductDeatils): void => {
-    console.log("sele", selectedColor, selectedSize, selectedQuantity, product);
-
     if (loginStatus) {
       if (
         selectedColor &&

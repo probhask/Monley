@@ -20,22 +20,62 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense
+        fallback={
+          <div className="w-screen h-screen flex flex-col justify-center items-center">
+            <LoadingSpinner />
+            <span className="text-lg font-semibold"> Loading...</span>
+          </div>
+        }
+      >
         <HomeLayout />
       </Suspense>
     ),
     children: [
       {
         index: true,
-        element: <Landing />,
+        element: (
+          <Suspense
+            fallback={
+              <div className="w-screen h-screen flex flex-col justify-center items-center">
+                <LoadingSpinner />
+                <span className="text-lg font-semibold"> Loading...</span>
+              </div>
+            }
+          >
+            <Landing />
+          </Suspense>
+        ),
       },
       {
         path: "shop",
-        element: <Shop />,
+        element: (
+          <Suspense
+            fallback={
+              <div className="w-screen h-screen flex flex-col justify-center items-center">
+                <LoadingSpinner />
+                <span className="text-lg font-semibold"> Loading...</span>
+              </div>
+            }
+          >
+            <Shop />
+          </Suspense>
+        ),
       },
       {
         path: "shop/product/:id",
-        element: <ItemDetail />,
+        element: (
+          <Suspense
+            fallback={
+              <div className="w-screen h-screen flex flex-col justify-center items-center">
+                <LoadingSpinner />
+                <span className="text-lg font-semibold"> Loading...</span>
+              </div>
+            }
+          >
+            <ItemDetail />
+          </Suspense>
+        ),
         errorElement: (
           <div className="my-10 text-center text-xl font-semibold uppercase">
             Unable to get product deatils
@@ -60,15 +100,48 @@ const router = createBrowserRouter([
       },
       {
         path: "cart",
-        element: <Cart />,
+        element: (
+          <Suspense
+            fallback={
+              <div className="w-screen h-screen flex flex-col justify-center items-center ">
+                <LoadingSpinner />
+                <span className="text-lg font-semibold"> Loading...</span>
+              </div>
+            }
+          >
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "user-profile",
-        element: <Profile />,
+        element: (
+          <Suspense
+            fallback={
+              <div className="w-screen h-screen flex flex-col justify-center items-center">
+                <LoadingSpinner />
+                <span className="text-lg font-semibold"> Loading...</span>
+              </div>
+            }
+          >
+            <Profile />
+          </Suspense>
+        ),
       },
       {
         path: "order",
-        element: <Order />,
+        element: (
+          <Suspense
+            fallback={
+              <div className="w-screen h-screen flex flex-col justify-center items-center">
+                <LoadingSpinner />
+                <span className="text-lg font-semibold"> Loading...</span>
+              </div>
+            }
+          >
+            <Order />
+          </Suspense>
+        ),
       },
       {
         path: "*",

@@ -6,7 +6,6 @@ type SearchInputFormProps = {
   setValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmitFunc: (e: React.FormEvent<HTMLFormElement>) => void;
   onFocus: () => void;
-  onBlur: () => void;
   onKeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 
@@ -16,7 +15,6 @@ const SearchInputForm = ({
   setValue,
   value,
   onFocus,
-  onBlur,
 }: SearchInputFormProps) => {
   return (
     <form className="max-w-full" onSubmit={onSubmitFunc}>
@@ -31,15 +29,8 @@ const SearchInputForm = ({
             onChange={setValue}
             autoComplete="off"
             onFocus={onFocus}
-            onBlur={onBlur}
             onKeyUp={onKeyUp}
           />
-          {/* {value && (
-            <AiOutlineClose
-              className="text-black cursor-pointer"
-              onClick={() => setValue("")}
-            />
-          )} */}
         </div>
         <button
           type="submit"

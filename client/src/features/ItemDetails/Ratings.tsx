@@ -3,16 +3,26 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useAppDispatch } from "../../store/hooks/hooks";
 import { giveRating } from "../../store/slice/productDetail";
 import { Button } from "../../components";
+import useUserSlice from "../../store/hooks/useUserSlice";
+import toast from "react-hot-toast";
 
 const Ratings = () => {
   const [ratedStars, setRatedStars] = useState<number>(0);
   const [starArray, setStarArray] = useState<boolean[]>([]);
   const [submittingReview, setSubmittingReview] = useState(false);
+  const { loginStatus } = useUserSlice();
   const dispatch = useAppDispatch();
   const handleSubmitRating = () => {
     if (ratedStars && !submittingReview) {
-      setSubmittingReview(true);
-      dispatch(giveRating(ratedStars));
+      if (loginStatus) {
+        setSubmittingReview(true);
+        dispatch(giveRating(ratedStars));
+        setTimeout(() => {
+          setSubmittingReview(false);
+        }, 2000);
+      } else {
+        toast.error("please login ");
+      }
     }
   };
 

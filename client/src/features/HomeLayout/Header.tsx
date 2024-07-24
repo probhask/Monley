@@ -117,7 +117,7 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
           {darkMode ? (
             <AiFillSun className="text-yellow-400" />
           ) : (
-            <AiFillMoon className="text-white" />
+            <AiFillMoon className="text-gray-400" />
           )}
         </div>
         {loginStatus && (

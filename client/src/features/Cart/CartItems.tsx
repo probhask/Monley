@@ -41,35 +41,43 @@ const CartItems = ({ cart }: { cart: CartItem }): JSX.Element => {
     }
   };
   return (
-    <div className="flex justify-between items-center px-2 py-2 gap-x-1">
-      <div className="flex items-center w-[45%] md:w-[40%] lg:w-[30%] overflow-x-clip">
-        <div className="flex justify-center items-center w-8 h-8 md:h-10 md:w-10 m bg-gray-200 mr-2">
-          <img
-            src={cart.product.image[0]}
-            alt="product-image"
-            className="max-h-full max-w-full object-cover"
-          />
+    <div className="flex flex-col sm:flex-row justify-between items-center px-2 py-2 gap-x-4 gap-y-3 flex-wrap mb-3 bg-gray-100">
+      <div className="flex sm:flex-[3] justify-between items-center w-full dark:text-black ">
+        <div className="flex items-center w-full overflow-x-clip">
+          <div className="flex justify-center items-center w-8 h-8 md:h-10 md:w-10 m bg-gray-200 mr-2">
+            <img
+              src={cart.product.image[0]}
+              alt="product-image"
+              className="max-h-full max-w-full object-cover"
+            />
+          </div>
+          <div className="overflow-clip line-clamp-1 text-sm md:text-base">
+            {cart.product.item_name}
+          </div>
         </div>
-        <div className="overflow-clip text-sm md:text-base">
-          {cart.product.item_name}
+        <div className="flex items-center justify-between w-48 gap-x-1.5">
+          <div className="text-sm md:text-base">Qty: {cart.quantity}</div>
+          <div className="text-sm md:text-base">
+            Price: ₹ {cart.totalPrice}{" "}
+          </div>
         </div>
       </div>
-      <div className="text-sm md:text-base">{cart.quantity}</div>
-      <div className="text-sm md:text-base">₹ {cart.totalPrice} </div>
-      <div className="cursor-pointer text-red-500 flex md:flex-col justify-self-center items-center gap-y-1.5 gap-x-1.5">
+
+      {/* button buy and remmove */}
+      <div className="cursor-pointer text-red-500 flex justify-self-center items-center gap-y-1.5 gap-x-1.5 sm:flex-1 w-[80%]">
         <button
-          className="flex justify-center items-center  md:border border-blue-500 text-blue-500  px-1  sm:px-1 md:px-2 py-0.5 rounded-md hover:bg-blue-600 w-full hover:text-white shadow-inner font-semibold text-sm"
+          className="flex justify-center items-center border border-blue-500 text-blue-500  px-1  sm:px-1 md:px-2 py-0.5 rounded-md hover:bg-blue-600 w-full hover:text-white shadow-inner font-semibold text-sm active:scale-80"
           onClick={handleSingleCacrtBuy}
         >
           <AiOutlineShopping />
-          <p className="hidden sm:block">BUY</p>
+          <span>BUY</span>
         </button>
         <button
-          className="flex justify-center items-center md:border border-[#ff0000] text-[#ff0000] px-1  sm:px-1 md:px-2 py-0.5 rounded-md hover:bg-[#ff0000c6] hover:text-white font-semibold text-sm w-full shadow-inner"
+          className="flex justify-center items-center border border-[#ff0000] text-[#ff0000] px-1  sm:px-1 md:px-2 py-0.5 rounded-md hover:bg-[#ff0000c6] hover:text-white font-semibold text-sm w-full shadow-inner active:scale-80"
           onClick={() => dispatch(removeFromCart(cart.cartId))}
         >
           <AiFillDelete />
-          <p className="hidden sm:block">REMOVE</p>
+          <span>REMOVE</span>
         </button>
       </div>
     </div>

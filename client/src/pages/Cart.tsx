@@ -12,7 +12,8 @@ const Cart = () => {
   const cartLoading = useAppSelector((state) => state.cart.isLoading);
 
   useEffect(() => {
-    custId && dispatch(getCart());
+    const dispatchId = dispatch(getCart());
+    return () => dispatchId.abort();
   }, []);
 
   if (cartLoading) {

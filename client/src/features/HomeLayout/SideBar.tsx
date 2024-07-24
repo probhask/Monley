@@ -79,7 +79,7 @@ const SideBar = ({ setToggleSideBar }: SideBarProps) => {
           {darkMode ? (
             <AiFillSun className="text-yellow-200 text-2xl" />
           ) : (
-            <AiFillMoon className="text-white text-2xl" />
+            <AiFillMoon className="text-gray-400 text-2xl" />
           )}
           <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
         </div>

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
 import { getBanner } from "../../store/slice/bannerSlice";
-import LoadingSpinner from "../../components/LoadingSpinner";
 import { Link } from "react-router-dom";
+import { HeadBannerShimmer } from "../../components";
 
 const HeadBanner = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +14,7 @@ const HeadBanner = () => {
   }, []);
 
   if (bannerLoading) {
-    return <LoadingSpinner />;
+    return <HeadBannerShimmer />;
   }
   return (
     <div className="flex w-full h-[400px] items-center gap-x-6 head-banner px-5 sm:px-20">
