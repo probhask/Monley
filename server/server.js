@@ -22,11 +22,9 @@ app.use(bodyParser.json());
 //   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 //   next();
 // });
-const corsOptiions = {
-  // origin: "http://localhost:5173/",
-  // origin: "http://localhost:5174",
+const corsOptions = {
   origin: "https://monley.netlify.app",
-  method: "GET,POST,DELETE,PUT,PATCH,HEAD ",
+  methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
   credentials: true,
 };
 
