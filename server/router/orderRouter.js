@@ -17,8 +17,11 @@ orderRouter.post("/", async (req, res) => {
   // console.log("req ", req.body);
   if (req.body) {
     const order = await orderProduct(req.body);
+    console.log("sucess");
+
     res.status(200).json({ order: order });
   } else {
+    console.log("fail");
     res.status(300).send("please provide data");
   }
 });
