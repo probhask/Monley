@@ -27,6 +27,7 @@ const corsOptions = {
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
   credentials: true,
 };
+app.use(cors(corsOptions));
 
 app.use("/items", itemRouter);
 app.use("/banner", bannerRouter);
