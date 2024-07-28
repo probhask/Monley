@@ -62,7 +62,9 @@ const Featured = () => {
           ref={boxRef}
         >
           {featured &&
-            featured.map((item, index) => <Items key={index} item={item} />)}
+            featured.map((item, index) => (
+              <Items key={index + item.productId} item={item} />
+            ))}
         </div>
         <button
           className="absolute top-[50%] translate-y-[-50%] right-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]   border-none shadow-md z-20 hover:bg-black hover:text-white active:scale-90 transition-all"

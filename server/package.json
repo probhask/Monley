@@ -1,10 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Doon Bazar backend server",
+  "description": "Monley ecommerce backend server",
   "main": "server.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "Bhaskar Sharma",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "nodemon": "^3.1.4",
     "uuid": "^9.0.1"
   }
 }

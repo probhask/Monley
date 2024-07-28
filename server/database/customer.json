@@ -1,1 +1,24 @@
-{"customer":[{"custId":"c5c4572a-7c03-4306-9bdc-82cf5e825bcd","name":"Bhaskar Sharma ","image":"","email":"bhaskar@gmail.com","password":"Bhaskar+23","address":"Dehradun","darkMode":false,"createdTime":"6/2/2024, 4:48:40 PM"},{"custId":"47ca08c6-a927-451f-954b-932e6112f619","name":"Suraj Sharma","image":"","email":"suraj@gmail.com","password":"suarj+23","address":"Dehradun","darkMode":true,"createdTime":"6/2/2024, 5:18:04 PM"}]}
+{
+    "customer": [
+        {
+            "custId": "c5c4572a-7c03-4306-9bdc-82cf5e825bcd",
+            "name": "Bhaskar Sharma ",
+            "image": "",
+            "email": "bhaskar@gmail.com",
+            "password": "Bhaskar+23",
+            "address": "Dehradun",
+            "darkMode": false,
+            "createdTime": "6/2/2024, 4:48:40 PM"
+        },
+        {
+            "custId": "47ca08c6-a927-451f-954b-932e6112f619",
+            "name": "Suraj Sharma",
+            "image": "",
+            "email": "suraj@gmail.com",
+            "password": "suarj+23",
+            "address": "Dehradun",
+            "darkMode": true,
+            "createdTime": "6/2/2024, 5:18:04 PM"
+        }
+    ]
+}
