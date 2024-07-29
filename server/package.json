@@ -4,7 +4,7 @@
   "description": "Monley ecommerce backend server",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon server.js"
   },
   "author": "Bhaskar Sharma",
   "license": "ISC",

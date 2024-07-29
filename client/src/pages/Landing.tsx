@@ -4,7 +4,7 @@ import {
   Collections,
   DeliveryInfo,
   Featured,
-  NewArrival,
+  // NewArrival,
   HeadBanner,
 } from "../features";
 import { HeadBannerShimmer } from "../components";
@@ -18,7 +18,7 @@ const Landing = () => {
       <div className="mt-7 mx-6 md:mx-14 lg:mx-28 gap-y-6">
         <Featured />
         <Collections />
-        <NewArrival />
+        {/* <NewArrival /> */}
         <DeliveryInfo />
         <BestSeller />
       </div>
