@@ -1,1 +1,863 @@
-{"products":[{"productId":"001","image":["images/1.jpg"],"collection":"The Indian Garage","item_name":"Men Slim Fit Regular Shorts","description":"Rhodium-Plated CZ Floral Studs","category":"studs","gender":["male"],"keyword":["nickers","shorts","cargo"],"color":["green","black","white"],"size":["M","L","XL"],"original_price":1599,"current_price":1000,"discount_percentage":60,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":5,"count":394},"soldUnit":100,"createdAt":"5/23/2024, 7: 40: 30 PM"},{"productId":"002","image":["images/18.jpg","images/12.jpg"],"collection":"Brinter M3","item_name":"Brinter M3 Mens T-Shirt ","description":"Mens T-Shirt from exclusive collection BrinterXMX","category":"shirt","gender":["male"],"keyword":["tshirt","informal"],"color":["white","black"],"size":["M","L","XL"],"original_price":1045,"current_price":606,"discount_percentage":42,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":2,"count":1402},"soldUnit":730,"createdAt":"5/15/2024, 7: 40: 30 PM"},{"productId":"003","image":["images/44.jpg","images/43.jpg"],"collection":"Mrants MX","item_name":" MX23  T-Shirt ","description":"MX23 fine collection is here","category":"tshirt","gender":["male"],"keyword":["tshirt","informal"],"color":["black","white","grey"],"size":["M","L","XL"],"original_price":1045,"current_price":606,"discount_percentage":42,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":1402},"soldUnit":780,"createdAt":"5/22/2024, 7: 40: 30 PM"},{"productId":"004","image":["images/37.jpg","images/19.jpg"],"collection":"Flonkx","item_name":"Flonks F56B Collection ","description":"Mens t-Shirt from exclusive collection Flonks F56B Collection ","category":"tshirt","gender":["male"],"keyword":["tshirt","informal"],"color":["black","white"],"size":["M","L","XL"],"original_price":1045,"current_price":606,"discount_percentage":42,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":790},"soldUnit":324,"createdAt":"5/10/2024, 7: 40: 30 PM"},{"productId":"005","image":["images/74.jpg","images/75.jpg"],"collection":"Pink PI1","item_name":"Top PI1 Collection ","description":"Top from exclusive collection PI1 Collection ","category":"top","gender":["female"],"keyword":["top","informal"],"color":["purple","red"],"size":["M","L","XL"],"original_price":800,"current_price":600,"discount_percentage":25,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":300},"soldUnit":178,"createdAt":"5/20/2024, 7: 40: 30 PM"},{"productId":"006","image":["images/59.png","images/61.png"],"collection":"Pink PI1","item_name":"Women T-Shirt ","description":"Top from exclusive collection PI1 Collection ","category":"top","gender":["female"],"keyword":["tshirt","informal"],"color":["cream","light green"],"size":["M","L","XL"],"original_price":800,"current_price":640,"discount_percentage":20,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":600},"soldUnit":689,"createdAt":"5/23/2024, 7: 40: 30 PM"},{"productId":"007","image":["images/85.jpg"],"collection":"WB12","item_name":"WB12 Women Shirt ","description":"New WB12 from exclusive Collection ","category":"shirt","gender":["female"],"keyword":["shirt","informal"],"color":["white","blue","pink"],"size":["M","L","XL"],"original_price":500,"current_price":45,"discount_percentage":10,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":578},"soldUnit":400,"createdAt":"5/09/2024, 7: 40: 30 PM"},{"productId":"010","image":["images/31.jpg"],"collection":"MI23","item_name":" Fade check shirt ","description":"Stylish mid fade shirt ","category":"shirt","gender":["men","male"],"keyword":["shirt","informal","check "],"color":["white","purple"],"size":["M","L","XL"],"original_price":500,"current_price":400,"discount_percentage":20,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":1000},"soldUnit":800,"createdAt":"5/20/2024, 7: 40: 30 PM"},{"productId":"008","image":["images/57.png"],"collection":"WB12","item_name":"White Shirt ","description":"Top Rated from WB12 Collection ","category":"shirt","gender":["female"],"keyword":["shirt","informal"],"color":["white","red"],"size":["M","L","XL"],"original_price":800,"current_price":600,"discount_percentage":25,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":1034},"soldUnit":457,"createdAt":"5/05/2024, 7: 40: 30 PM"},{"productId":"009","image":["images/32.jpg","images/29.jpg"],"collection":"MF23","item_name":"Men Fromal Shirt ","description":"Most elegant MF23 Shirt ","category":"shirt","gender":["male"],"keyword":["shirt","formal"],"color":["white","gary","black"],"size":["M","L","XL"],"original_price":1000,"current_price":800,"discount_percentage":20,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":200},"soldUnit":127,"createdAt":"5/01/2024, 7: 40: 30 PM"},{"productId":"011","image":["images/39.jpg","images/42.jpg"],"collection":"MF23","item_name":"Men T-Shirt ","description":"MF23 T-Shirt collection ","category":"tshirt","gender":["male"],"keyword":["informal tshirt"],"color":["light green","cream"],"size":["M","L","XL"],"original_price":1500,"current_price":1125,"discount_percentage":25,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":898},"soldUnit":1000,"createdAt":"5/01/2024, 7: 40: 30 PM"},{"productId":"012","image":["images/87.jpg"],"collection":"WX19","item_name":"Top from WX19 ","description":"Top from exclusive collection WX!9 Collection ","category":"top","gender":["female"],"keyword":["top","informal"],"color":["white","red"],"size":["M","L","XL"],"original_price":1000,"current_price":600,"discount_percentage":40,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":2,"count":890},"soldUnit":50,"createdAt":"5/11/2024, 7: 40: 30 PM"},{"productId":"013","image":["images/79.jpg","images/67.jpg"],"collection":"Pink PI2","item_name":"Best from PI2 Top PI56","description":" exclusive collection PI1 Collection ","category":"top","gender":["female"],"keyword":["top"],"color":["cream","light green"],"size":["M","L","XL"],"original_price":800,"current_price":640,"discount_percentage":20,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":600},"soldUnit":800,"createdAt":"5/11/2024, 7: 40: 30 PM"},{"productId":"014","image":["images/69.jpg","images/70.jpg"],"collection":"WX19","item_name":"Shirt from WX19","description":"Best discount you on WX19 ","category":"shirt","gender":["female"],"keyword":["shirt","informal"],"color":["black","red"],"size":["M","L","XL"],"original_price":500,"current_price":350,"discount_percentage":30,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":689},"soldUnit":380,"createdAt":"5/23/2024, 7: 40: 30 PM"},{"productId":"015","image":["images/66.jpg","images/76.jpg"],"collection":"Pink PI2","item_name":"Fine PI2 Collection","description":"Best in Business Best in rating Presenting PI25","category":"top","gender":["female"],"keyword":["top"],"color":["black","light green"],"size":["M","L","XL"],"original_price":1000,"current_price":600,"discount_percentage":40,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":600},"soldUnit":300,"createdAt":"5/23/2024, 7: 40: 30 PM"},{"productId":"016","image":["images/13.jpg","images/17.jpg"],"collection":"Brinter MX3","item_name":" MX23  T-Shirt ","description":"Mens T_Shirt from exclusive collection BrinterXMX","category":"tshirt","gender":["male"],"keyword":["shirt","informal","party"],"color":["blue","white"],"size":["M","L","XL"],"original_price":1045,"current_price":606,"discount_percentage":42,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":1400},"soldUnit":730,"createdAt":"5/15/2024, 7: 40: 30 PM"},{"productId":"017","image":["images/14.jpg","images/16.jpg"],"collection":"Brinter MF53","item_name":" MF53  Shirt ","description":"Mens Shirt from exclusive collection BrinterXMX","category":"shirt","gender":["male"],"keyword":["shirt","informal","party"],"color":["black","cream"],"size":["M","L","XL"],"original_price":600,"current_price":560,"discount_percentage":10,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":189},"soldUnit":79,"createdAt":"5/24/2024, 7: 40: 30 PM"},{"productId":"018","image":["images/40.jpg","images/41.jpg"],"collection":"Brinter MX3","item_name":" MX23  T-Shirt ","description":"MX23 fine collection is here","category":"tshirt","gender":["male"],"keyword":["shirt","informal"],"color":["purple","white","grey"],"size":["M","L","XL"],"original_price":1045,"current_price":606,"discount_percentage":42,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":3,"count":578},"soldUnit":346,"createdAt":"5/02/2024, 7: 40: 30 PM"},{"productId":"019","image":["images/22.jpg","images/47.jpg"],"collection":"Brinter M3","item_name":" M3 Check Shirt ","description":"M3 check shirt is here","category":"shirt","gender":["male"],"keyword":["shirt","informal","check"],"color":["purple","white","grey"],"size":["M","L","XL"],"original_price":1045,"current_price":606,"discount_percentage":42,"return_period":14,"delivery_period":7,"comments":[{"custId":"","comment":"","rating":0}],"rating":{"stars":4,"count":300},"soldUnit":200,"createdAt":"5/22/2024, 7: 40: 30 PM"}]}
+{
+    "products": [
+        {
+            "productId": "001",
+            "image": [
+                "images/1.jpg"
+            ],
+            "collection": "The Indian Garage",
+            "item_name": "Men Slim Fit Regular Shorts",
+            "description": "Rhodium-Plated CZ Floral Studs",
+            "category": "studs",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "nickers",
+                "shorts",
+                "cargo"
+            ],
+            "color": [
+                "green",
+                "black",
+                "white"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1599,
+            "current_price": 1000,
+            "discount_percentage": 60,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 5,
+                "count": 394
+            },
+            "soldUnit": 100,
+            "createdAt": "5/23/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "002",
+            "image": [
+                "images/18.jpg",
+                "images/12.jpg"
+            ],
+            "collection": "Brinter M3",
+            "item_name": "Brinter M3 Mens T-Shirt ",
+            "description": "Mens T-Shirt from exclusive collection BrinterXMX",
+            "category": "shirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "tshirt",
+                "informal"
+            ],
+            "color": [
+                "white",
+                "black"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1045,
+            "current_price": 606,
+            "discount_percentage": 42,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 2,
+                "count": 1402
+            },
+            "soldUnit": 730,
+            "createdAt": "5/15/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "003",
+            "image": [
+                "images/44.jpg",
+                "images/43.jpg"
+            ],
+            "collection": "Mrants MX",
+            "item_name": " MX23  T-Shirt ",
+            "description": "MX23 fine collection is here",
+            "category": "tshirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "tshirt",
+                "informal"
+            ],
+            "color": [
+                "black",
+                "white",
+                "grey"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1045,
+            "current_price": 606,
+            "discount_percentage": 42,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 1402
+            },
+            "soldUnit": 780,
+            "createdAt": "5/22/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "004",
+            "image": [
+                "images/37.jpg",
+                "images/19.jpg"
+            ],
+            "collection": "Flonkx",
+            "item_name": "Flonks F56B Collection ",
+            "description": "Mens t-Shirt from exclusive collection Flonks F56B Collection ",
+            "category": "tshirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "tshirt",
+                "informal"
+            ],
+            "color": [
+                "black",
+                "white"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1045,
+            "current_price": 606,
+            "discount_percentage": 42,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 790
+            },
+            "soldUnit": 324,
+            "createdAt": "5/10/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "005",
+            "image": [
+                "images/74.jpg",
+                "images/75.jpg"
+            ],
+            "collection": "Pink PI1",
+            "item_name": "Top PI1 Collection ",
+            "description": "Top from exclusive collection PI1 Collection ",
+            "category": "top",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "top",
+                "informal"
+            ],
+            "color": [
+                "purple",
+                "red"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 800,
+            "current_price": 600,
+            "discount_percentage": 25,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 300
+            },
+            "soldUnit": 178,
+            "createdAt": "5/20/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "006",
+            "image": [
+                "images/59.png",
+                "images/61.png"
+            ],
+            "collection": "Pink PI1",
+            "item_name": "Women T-Shirt ",
+            "description": "Top from exclusive collection PI1 Collection ",
+            "category": "top",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "tshirt",
+                "informal"
+            ],
+            "color": [
+                "cream",
+                "light green"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 800,
+            "current_price": 640,
+            "discount_percentage": 20,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 600
+            },
+            "soldUnit": 689,
+            "createdAt": "5/23/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "007",
+            "image": [
+                "images/85.jpg"
+            ],
+            "collection": "WB12",
+            "item_name": "WB12 Women Shirt ",
+            "description": "New WB12 from exclusive Collection ",
+            "category": "shirt",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "shirt",
+                "informal"
+            ],
+            "color": [
+                "white",
+                "blue",
+                "pink"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 500,
+            "current_price": 45,
+            "discount_percentage": 10,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 578
+            },
+            "soldUnit": 400,
+            "createdAt": "5/09/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "010",
+            "image": [
+                "images/31.jpg"
+            ],
+            "collection": "MI23",
+            "item_name": " Fade check shirt ",
+            "description": "Stylish mid fade shirt ",
+            "category": "shirt",
+            "gender": [
+                "men",
+                "male"
+            ],
+            "keyword": [
+                "shirt",
+                "informal",
+                "check "
+            ],
+            "color": [
+                "white",
+                "purple"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 500,
+            "current_price": 400,
+            "discount_percentage": 20,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 1000
+            },
+            "soldUnit": 800,
+            "createdAt": "5/20/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "008",
+            "image": [
+                "images/57.png"
+            ],
+            "collection": "WB12",
+            "item_name": "White Shirt ",
+            "description": "Top Rated from WB12 Collection ",
+            "category": "shirt",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "shirt",
+                "informal"
+            ],
+            "color": [
+                "white",
+                "red"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 800,
+            "current_price": 600,
+            "discount_percentage": 25,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 1034
+            },
+            "soldUnit": 457,
+            "createdAt": "5/05/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "009",
+            "image": [
+                "images/32.jpg",
+                "images/29.jpg"
+            ],
+            "collection": "MF23",
+            "item_name": "Men Fromal Shirt ",
+            "description": "Most elegant MF23 Shirt ",
+            "category": "shirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "shirt",
+                "formal"
+            ],
+            "color": [
+                "white",
+                "gary",
+                "black"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1000,
+            "current_price": 800,
+            "discount_percentage": 20,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 200
+            },
+            "soldUnit": 127,
+            "createdAt": "5/01/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "011",
+            "image": [
+                "images/39.jpg",
+                "images/42.jpg"
+            ],
+            "collection": "MF23",
+            "item_name": "Men T-Shirt ",
+            "description": "MF23 T-Shirt collection ",
+            "category": "tshirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "informal tshirt"
+            ],
+            "color": [
+                "light green",
+                "cream"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1500,
+            "current_price": 1125,
+            "discount_percentage": 25,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 898
+            },
+            "soldUnit": 1000,
+            "createdAt": "5/01/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "012",
+            "image": [
+                "images/87.jpg"
+            ],
+            "collection": "WX19",
+            "item_name": "Top from WX19 ",
+            "description": "Top from exclusive collection WX!9 Collection ",
+            "category": "top",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "top",
+                "informal"
+            ],
+            "color": [
+                "white",
+                "red"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1000,
+            "current_price": 600,
+            "discount_percentage": 40,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 2,
+                "count": 890
+            },
+            "soldUnit": 50,
+            "createdAt": "5/11/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "013",
+            "image": [
+                "images/79.jpg",
+                "images/67.jpg"
+            ],
+            "collection": "Pink PI2",
+            "item_name": "Best from PI2 Top PI56",
+            "description": " exclusive collection PI1 Collection ",
+            "category": "top",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "top"
+            ],
+            "color": [
+                "cream",
+                "light green"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 800,
+            "current_price": 640,
+            "discount_percentage": 20,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 600
+            },
+            "soldUnit": 800,
+            "createdAt": "5/11/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "014",
+            "image": [
+                "images/69.jpg",
+                "images/70.jpg"
+            ],
+            "collection": "WX19",
+            "item_name": "Shirt from WX19",
+            "description": "Best discount you on WX19 ",
+            "category": "shirt",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "shirt",
+                "informal"
+            ],
+            "color": [
+                "black",
+                "red"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 500,
+            "current_price": 350,
+            "discount_percentage": 30,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 689
+            },
+            "soldUnit": 380,
+            "createdAt": "5/23/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "015",
+            "image": [
+                "images/66.jpg",
+                "images/76.jpg"
+            ],
+            "collection": "Pink PI2",
+            "item_name": "Fine PI2 Collection",
+            "description": "Best in Business Best in rating Presenting PI25",
+            "category": "top",
+            "gender": [
+                "female"
+            ],
+            "keyword": [
+                "top"
+            ],
+            "color": [
+                "black",
+                "light green"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1000,
+            "current_price": 600,
+            "discount_percentage": 40,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 600
+            },
+            "soldUnit": 300,
+            "createdAt": "5/23/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "016",
+            "image": [
+                "images/13.jpg",
+                "images/17.jpg"
+            ],
+            "collection": "Brinter MX3",
+            "item_name": " MX23  T-Shirt ",
+            "description": "Mens T_Shirt from exclusive collection BrinterXMX",
+            "category": "tshirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "shirt",
+                "informal",
+                "party"
+            ],
+            "color": [
+                "blue",
+                "white"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1045,
+            "current_price": 606,
+            "discount_percentage": 42,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 1400
+            },
+            "soldUnit": 730,
+            "createdAt": "5/15/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "017",
+            "image": [
+                "images/14.jpg",
+                "images/16.jpg"
+            ],
+            "collection": "Brinter MF53",
+            "item_name": " MF53  Shirt ",
+            "description": "Mens Shirt from exclusive collection BrinterXMX",
+            "category": "shirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "shirt",
+                "informal",
+                "party"
+            ],
+            "color": [
+                "black",
+                "cream"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 600,
+            "current_price": 560,
+            "discount_percentage": 10,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 189
+            },
+            "soldUnit": 79,
+            "createdAt": "5/24/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "018",
+            "image": [
+                "images/40.jpg",
+                "images/41.jpg"
+            ],
+            "collection": "Brinter MX3",
+            "item_name": " MX23  T-Shirt ",
+            "description": "MX23 fine collection is here",
+            "category": "tshirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "shirt",
+                "informal"
+            ],
+            "color": [
+                "purple",
+                "white",
+                "grey"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1045,
+            "current_price": 606,
+            "discount_percentage": 42,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 3,
+                "count": 578
+            },
+            "soldUnit": 346,
+            "createdAt": "5/02/2024, 7: 40: 30 PM"
+        },
+        {
+            "productId": "019",
+            "image": [
+                "images/22.jpg",
+                "images/47.jpg"
+            ],
+            "collection": "Brinter M3",
+            "item_name": " M3 Check Shirt ",
+            "description": "M3 check shirt is here",
+            "category": "shirt",
+            "gender": [
+                "male"
+            ],
+            "keyword": [
+                "shirt",
+                "informal",
+                "check"
+            ],
+            "color": [
+                "purple",
+                "white",
+                "grey"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "original_price": 1045,
+            "current_price": 606,
+            "discount_percentage": 42,
+            "return_period": 14,
+            "delivery_period": 7,
+            "comments": [
+                {
+                    "custId": "",
+                    "comment": "",
+                    "rating": 0
+                }
+            ],
+            "rating": {
+                "stars": 4,
+                "count": 300
+            },
+            "soldUnit": 200,
+            "createdAt": "5/22/2024, 7: 40: 30 PM"
+        }
+    ]
+}
