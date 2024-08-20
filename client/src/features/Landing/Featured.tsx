@@ -31,8 +31,8 @@ const Featured = () => {
   if (featuredLoading) {
     return (
       <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
-        {[1, 2, 3, 4].map(() => (
-          <ItemShimmer />
+        {[1, 2, 3, 4].map((index) => (
+          <ItemShimmer key={index} />
         ))}
       </div>
     );
@@ -47,11 +47,10 @@ const Featured = () => {
     <div className="my-7">
       <h1 className="text-lg h-full font-bold">Featured Products</h1>
 
-      {/* <div className=" flex justify-center items-center">
-        <div className=" flex items-center justify-center w-full md:w-[80%] lg:w-[70%]"> */}
       <div className=" flex relative overflow-hidden p-2 h-full">
         <button
           className="absolute top-[50%] translate-y-[-50%] left-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]  border-none shadow-md z-20 hover:bg-black hover:text-white active:scale-90 transition-all"
+          aria-label="previous button"
           onClick={prevBtn}
         >
           <AiOutlineLeft />
@@ -68,6 +67,7 @@ const Featured = () => {
         </div>
         <button
           className="absolute top-[50%] translate-y-[-50%] right-0 flex justify-center items-center text-2xl px-1 py-1 rounded-full bg-[#00000047]   border-none shadow-md z-20 hover:bg-black hover:text-white active:scale-90 transition-all"
+          aria-label="next button"
           onClick={nextBtn}
         >
           <AiOutlineRight />

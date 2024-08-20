@@ -18,8 +18,8 @@ const BestSeller = () => {
   if (bestSellerLoading) {
     return (
       <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
-        {[1, 2, 3, 4].map(() => (
-          <ItemShimmer />
+        {[1, 2, 3, 4].map((index) => (
+          <ItemShimmer key={index} />
         ))}
       </div>
     );
