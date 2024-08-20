@@ -19,8 +19,8 @@ type HeaderProps = {
 };
 
 const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
-  const [userIconOptionn, setUserIconOptionn] = useState<boolean>(false);
-  const userIconRef = useDetectOutSideClick(() => setUserIconOptionn(false));
+  const [userIconOption, setUserIconOption] = useState<boolean>(false);
+  const userIconRef = useDetectOutSideClick(() => setUserIconOption(false));
   const [signUpOptions, setSignUpOptions] = useState<boolean>(false);
   const signUpRef = useDetectOutSideClick(() => setSignUpOptions(false));
   const darkMode = useAppSelector((state) => state.user.darkMode);
@@ -32,13 +32,13 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
   const navigate = useNavigate();
 
   const handleVisitProfile = (): void => {
-    setUserIconOptionn(false);
+    setUserIconOption(false);
     navigate("/user-profile");
   };
 
-  const hanleLogout = (): void => {
+  const handleLogout = (): void => {
     dispatch(logout());
-    setUserIconOptionn(false);
+    setUserIconOption(false);
   };
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
   return (
     <nav
       className="flex items-center justify-between h-16  px-4 md:px-6"
-      onClick={() => setUserIconOptionn(false)}
+      onClick={() => setUserIconOption(false)}
     >
       <div className=" text-2xl font-bold md:hidden cursor-pointer">
         <AiOutlineMenu onClick={() => setToggleSideBar(!toggleSideBar)} />
@@ -106,6 +106,7 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
         <Link
           to="/search"
           className="rounded-full bg-gray-100 w-6 h-6 md:w-8 md:h-8 flex items-center justify-center dark:bg-slate-600 "
+          title="search"
         >
           <IoMdSearch className="text-slate-800 dark:text-gray-200" />
         </Link>
@@ -125,11 +126,11 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
             className="relative rounded-full bg-gray-100 w-6 h-6 md:w-8 md:h-8 hidden md:flex items-center justify-center dark:bg-slate-600 cursor-pointer"
             onClick={(e) => {
               e.stopPropagation();
-              setUserIconOptionn(!userIconOptionn);
+              setUserIconOption(!userIconOption);
             }}
           >
             <IoMdPerson className="text-gray-700 dark:text-gray-200" />
-            {userIconOptionn && (
+            {userIconOption && (
               <div
                 className="absolute top-10 right-0 z-50 bg-white text-lg text-gray-600 font-semibold py-1 shadow-lg rounded-md"
                 ref={userIconRef}
@@ -141,7 +142,7 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
                   >
                     Profile
                   </li>
-                  <li onClick={hanleLogout} className="hover:bg-gray-100 px-8">
+                  <li onClick={handleLogout} className="hover:bg-gray-100 px-8">
                     Logout
                   </li>
                 </ul>
@@ -151,7 +152,11 @@ const Header = ({ toggleSideBar, setToggleSideBar }: HeaderProps) => {
         )}
         {loginStatus && (
           <div className="relative rounded-full bg-gray-100 w-6 h-6 md:w-8 md:h-8 flex items-center justify-center dark:bg-slate-600 ">
-            <Link to={`/cart`} className="text-base font-semibold text-red-600">
+            <Link
+              to={`/cart`}
+              className="text-base font-semibold text-red-600"
+              title="cart"
+            >
               <AiOutlineShoppingCart />
             </Link>
             <div className=" absolute -top-3 -right-3 w-5 h-5 text-sm font-bold bg-red-600 text-black rounded-full flex justify-center items-center">
