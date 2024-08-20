@@ -36,19 +36,10 @@ cron.schedule("*/14 * * * * ", () => {
       console.error("error during restart: ", err.message);
     });
 });
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader(
-//     "Access-Control-Allow-Methods",
-//     "GET,POST,DELETE,PUT,PATCH,HEAD"
-//   );
-//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-//   next();
-// });
 
 const corsOptions = {
   origin: "https://monley.netlify.app",
-  // origin: "http://http://localhost:5173/",
+  // origin: "http://localhost:5173",
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
   credentials: true,
 };
