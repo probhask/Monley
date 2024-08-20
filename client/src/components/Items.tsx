@@ -18,7 +18,7 @@ const Items = forwardRef<HTMLDivElement, itemsProps>(
           <img
             src={`/${item.image[0]}`}
             alt="item-image"
-            className="max-w-full max-h-full object-contain"
+            className=" max-h-[300px] max-w-[225px] object-contain"
           />
 
           <div
@@ -27,7 +27,7 @@ const Items = forwardRef<HTMLDivElement, itemsProps>(
             }`}
           >
             {item.discount_percentage && (
-              <div className="bg-red-500 px-1 text-sm font-semibold text-white">
+              <div className="bg-red-500/80 px-1 text-sm font-semibold text-white">
                 {item.discount_percentage}% OFF
               </div>
             )}
@@ -47,7 +47,7 @@ const Items = forwardRef<HTMLDivElement, itemsProps>(
         >
           <div className="flex justify-between gap-x-4">
             <div className="font-semibold mb-0.5">{item.item_name}</div>
-            <div className="text-orange-600 font-semibold">
+            <div className="text-orange-800 font-semibold">
               ₹{item.current_price}
             </div>
           </div>
@@ -55,16 +55,6 @@ const Items = forwardRef<HTMLDivElement, itemsProps>(
             {item.description}
           </div>
         </Link>
-        {/* <div className="flex justify-between px-1.5">
-        {item.discount_percentage && (
-          <div className="text-red-600 font-semibold">
-            {item.discount_percentage}% OFF
-          </div>
-        )}
-        <button className="border-2 border-[#ff0000] text-[#ff0000] px-3 py-1 text-sm rounded-lg hover:bg-[#ff0000] hover:text-white shadow-inner font-semibold ml-1.5 mb-3">
-          Add to Cart
-        </button>
-      </div> */}
       </div>
     );
   }
