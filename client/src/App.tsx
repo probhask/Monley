@@ -78,7 +78,7 @@ const router = createBrowserRouter([
         ),
         errorElement: (
           <div className="my-10 text-center text-xl font-semibold uppercase">
-            Unable to get product deatils
+            Unable to get product details
           </div>
         ),
       },
