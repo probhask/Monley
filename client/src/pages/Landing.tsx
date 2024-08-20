@@ -1,13 +1,10 @@
-import { Suspense } from "react";
-import {
-  BestSeller,
-  Collections,
-  DeliveryInfo,
-  Featured,
-  // NewArrival,
-  HeadBanner,
-} from "../features";
-import { HeadBannerShimmer } from "../components";
+import React, { Suspense } from "react";
+import { Collections, DeliveryInfo } from "../features";
+
+const HeadBanner = React.lazy(() => import("../features/Landing/HeadBanner"));
+const Featured = React.lazy(() => import("../features/Landing/Featured"));
+const BestSeller = React.lazy(() => import("../features/Landing/BestSeller"));
+import { HeadBannerShimmer, ItemShimmer } from "../components";
 
 const Landing = () => {
   return (
@@ -16,11 +13,32 @@ const Landing = () => {
         <HeadBanner />
       </Suspense>
       <div className="mt-7 mx-6 md:mx-14 lg:mx-28 gap-y-6">
-        <Featured />
+        <Suspense
+          fallback={
+            <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
+              {[1, 2, 3, 4].map((index) => (
+                <ItemShimmer key={index} />
+              ))}
+            </div>
+          }
+        >
+          <Featured />
+        </Suspense>
+
         <Collections />
-        {/* <NewArrival /> */}
         <DeliveryInfo />
-        <BestSeller />
+
+        <Suspense
+          fallback={
+            <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
+              {[1, 2, 3, 4].map((index) => (
+                <ItemShimmer key={index} />
+              ))}
+            </div>
+          }
+        >
+          <BestSeller />
+        </Suspense>
       </div>
     </div>
   );

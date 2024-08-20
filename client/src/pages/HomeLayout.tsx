@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { MonleyContextProvider } from "../context/context";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Footer, Header, SideBar } from "../features";
 
 const HomeLayout = () => {
@@ -19,7 +19,9 @@ const HomeLayout = () => {
       />
       <div className="w-full mx-auto">
         <MonleyContextProvider>
-          <Outlet />
+          <Suspense fallback={<p>loading</p>}>
+            <Outlet />
+          </Suspense>
         </MonleyContextProvider>
       </div>
       <Footer />
