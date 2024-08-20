@@ -10,7 +10,8 @@ const HeadBanner = () => {
   const bannerLoading = useAppSelector((store) => store.banner.isLoading);
 
   useEffect(() => {
-    dispatch(getBanner());
+    const dispatchId = dispatch(getBanner());
+    return () => dispatchId.abort();
   }, []);
 
   if (bannerLoading) {
@@ -29,9 +30,8 @@ const HeadBanner = () => {
           {banner?.smallText}
         </div>
         <Link
-          // to={`shop/product/:${banner?.productId}`}
           to={`shop`}
-          className="bg-[#ff0000] text-white font-semibold px-3 py-1.5 rounded-2xl hover:shadow-md hover:scale-110 w-fit"
+          className="bg-[#ff0000]/90 text-white font-semibold px-3 py-1.5 rounded-2xl hover:shadow-md hover:scale-110 w-fit"
         >
           SHOP NOW
         </Link>
