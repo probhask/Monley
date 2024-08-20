@@ -23,7 +23,7 @@ The Monley E-commerce project is a full-stack web application built using React 
 [Website Link🔗](https://monley.netlify.app) - https://monley.netlify.app
 
 - **Home Page**
-  [!Home Page Image](./website_images//home.png)
+  [!Home Page Image](./website_images/home.png)
 
 ## Project Structure
 
@@ -137,20 +137,22 @@ The frontend should now be running and the backend at http://localhost:3000.
 - **Login**: For login
 - **Register**: For new Account creation.
 
+## Pages Image
+
 - **Home Page**
-  [!Home Page Image](./website_images//home.png)
+  [!Home Page Image](./website_images/home.png)
 - **Shop Page**
-  [!Shop Page Image](./website_images//shop.png)
+  [!Shop Page Image](./website_images/shop.png)
 - **Search Page**
-  [!Search Page Image](./website_images//search.png)
+  [!Search Page Image](./website_images/search.png)
 - **cart Page**
-  [!cart Page Image](./website_images//cart.png)
+  [!cart Page Image](./website_images/cart.png)
 - **Order Page**
-  [!Order Page Image](./website_images//order.png)
+  [!Order Page Image](./website_images/order.png)
 - **User Profile Page**
-  [!User Profile Page Image](./website_images//profile.png)
+  [!User Profile Page Image](./website_images/profile.png)
 - **Login Page**
-  [!cart Page Image](./website_images//login.png)
+  [!cart Page Image](./website_images/login.png)
 
 ## Features
 
