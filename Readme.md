@@ -8,6 +8,7 @@
   - [Backend Structure](#backend-structure)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
+- [Pages](#pages)
 - [Features](#features)
   - [Product Listing](#product-listing)
   - [Product Details](#product-details)
@@ -20,6 +21,9 @@
 The Monley E-commerce project is a full-stack web application built using React and TypeScript for the frontend and Node.js for the backend. The application provides a seamless online shopping experience with features such as product browsing, cart management, and user authentication.
 
 [Website Link🔗](https://monley.netlify.app) - https://monley.netlify.app
+
+- **Home Page**
+  [!Home Page Image](./website_images//home.png)
 
 ## Project Structure
 
@@ -133,6 +137,21 @@ The frontend should now be running and the backend at http://localhost:3000.
 - **Login**: For login
 - **Register**: For new Account creation.
 
+- **Home Page**
+  [!Home Page Image](./website_images//home.png)
+- **Shop Page**
+  [!Shop Page Image](./website_images//shop.png)
+- **Search Page**
+  [!Search Page Image](./website_images//search.png)
+- **cart Page**
+  [!cart Page Image](./website_images//cart.png)
+- **Order Page**
+  [!Order Page Image](./website_images//order.png)
+- **User Profile Page**
+  [!User Profile Page Image](./website_images//profile.png)
+- **Login Page**
+  [!cart Page Image](./website_images//login.png)
+
 ## Features
 
 ### Product Listing
@@ -147,13 +166,17 @@ The frontend should now be running and the backend at http://localhost:3000.
 - **Detailed Product View**: Includes images, descriptions,specifications and reviews.
 - **Related Products**: Suggestions for similar or related products.
 
-## Cart Management
+### Cart Management
 
 - **Add/Remove Items**: Manage items in cart.
 
 ### Checkout
 
 - **Payment Integration**: Dummy payment system.
+
+### Themes
+
+- **Dark/Light Theme**: Dark and light them toggle
 
 ### user Authentication
 

@@ -43,7 +43,7 @@ const Profile = () => {
             </div>
           </div>
 
-          {/* other ingfo */}
+          {/* other info */}
           <div className="flex flex-col items-center gap-y-5 mt-5">
             <Link
               to="/cart"
