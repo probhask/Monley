@@ -10,7 +10,6 @@ const ProductInfo = () => {
   } = useMonleyContext();
   return (
     <div className="w-full">
-      {/* <h1 className="font-semibold text-lg ml-2">Item</h1> */}
       <div className="flex items-center w-full mb-4 px-2 py-1 bg-orange-500 text-black rounded-md">
         <div className="h-full w-14 mr-2 rounded-md overflow-hidden">
           <img

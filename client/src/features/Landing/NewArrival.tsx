@@ -24,34 +24,6 @@ const NewArrival = () => {
           <h1 className="mb-2 text-2xl font-bold">New Arrival</h1>
           <div className="w-12 h-0.5 bg-[#ff0000]"></div>
         </div>
-        {/* <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 font-semibold">
-          <div
-            className={`cursor-pointer rounded-md px-3 ${
-              tab === 1 ? "bg-[#ff0000] text-white" : "bg-gray-200 text-black"
-            }`}
-            onClick={() => setTab(1)}
-          >
-            ALL
-          </div>
-          <div className="flex justify-center gap-x-6 font-semibold">
-            <div
-              className={`cursor-pointer rounded-md px-3 ${
-                tab === 2 ? "bg-[#ff0000] text-white" : "bg-gray-200 text-black"
-              }`}
-              onClick={() => setTab(2)}
-            >
-              MEN
-            </div>
-            <div
-              className={`cursor-pointer rounded-md px-3 ${
-                tab === 3 ? "bg-[#ff0000] text-white" : "bg-gray-200 text-black"
-              }`}
-              onClick={() => setTab(3)}
-            >
-              WOMEN
-            </div>
-          </div>
-        </div> */}
 
         <div className="flex sm:flex-wrap overflow-x-auto hide-scrollbar sm:justify-center md:gap-x-10">
           {newArrival &&

@@ -22,7 +22,6 @@ const MultiRange = ({
     <div className="flex justify-center">
       <label className="cursor-pointer min-w-32">
         <span className="label-text capitalize">{label}</span>
-        {/* <span className="tabular-nums">&#8377;{selectedPrice}</span> */}
       </label>
       <div className="flex items-center relative w-[150px] gap-x-3">
         <input
