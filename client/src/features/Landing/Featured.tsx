@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/hooks";
-import { Items, ItemShimmer } from "../../components";
+import { ItemShimmer } from "../../components";
 import { getFeaturedItems } from "../../store/slice/featuredItems";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+const Items = lazy(() => import("../../components/Items"));
 
 const Featured = () => {
   const featured = useAppSelector((state) => state.featuredItems.data);
@@ -30,7 +31,7 @@ const Featured = () => {
   }, []);
   if (featuredLoading) {
     return (
-      <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
+      <div className="flex items-center gap-2 overflow-hidden my-7">
         {[1, 2, 3, 4].map((index) => (
           <ItemShimmer key={index} />
         ))}
@@ -62,7 +63,10 @@ const Featured = () => {
         >
           {featured &&
             featured.map((item, index) => (
-              <Items key={index + item.productId} item={item} />
+              <Suspense key={index + item.productId} fallback={<ItemShimmer />}>
+                <Items item={item} />
+              </Suspense>
+              // <Items key={index + item.productId} item={item} />
             ))}
         </div>
         <button

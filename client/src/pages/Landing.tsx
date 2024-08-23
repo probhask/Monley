@@ -30,12 +30,13 @@ const Landing = () => {
 
         <Suspense>
           <Collections />
+        </Suspense>
+        <Suspense>
           <DeliveryInfo />
         </Suspense>
-
         <Suspense
           fallback={
-            <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar my-7">
+            <div className="flex items-center gap-2 overflow-x-hidden hide-scrollbar my-7">
               {[1, 2, 3, 4].map((index) => (
                 <ItemShimmer key={index} />
               ))}
