@@ -19,7 +19,7 @@ const DeliveryInfo = () => {
       </div>
       <div className="flex h-10 w-48 sm:w-56 items-center justify-evenly bg-gray-300">
         <AiFillStar className="text-[#ff0000] text-xl sm:text-3xl" />
-        <p className="text-sm sm:text-base">GUARENTEED PRODUCT</p>
+        <p className="text-sm sm:text-base">GUARANTEED PRODUCT</p>
       </div>
     </div>
   );
