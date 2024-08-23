@@ -1,5 +1,8 @@
 import React, { Suspense } from "react";
-import { Collections, DeliveryInfo } from "../features";
+const Collections = React.lazy(() => import("../features/Landing/Collections"));
+const DeliveryInfo = React.lazy(
+  () => import("../features/Landing/DeliveryInfo")
+);
 
 const HeadBanner = React.lazy(() => import("../features/Landing/HeadBanner"));
 const Featured = React.lazy(() => import("../features/Landing/Featured"));
@@ -25,8 +28,10 @@ const Landing = () => {
           <Featured />
         </Suspense>
 
-        <Collections />
-        <DeliveryInfo />
+        <Suspense>
+          <Collections />
+          <DeliveryInfo />
+        </Suspense>
 
         <Suspense
           fallback={
