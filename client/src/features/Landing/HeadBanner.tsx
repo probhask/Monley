@@ -30,7 +30,7 @@ const HeadBanner = () => {
           {banner?.smallText}
         </div>
         <Link
-          to={`shop`}
+          to="/shop"
           className="bg-[#ff0000]/90 text-white font-semibold px-3 py-1.5 rounded-2xl hover:shadow-md hover:scale-110 w-fit"
         >
           SHOP NOW
