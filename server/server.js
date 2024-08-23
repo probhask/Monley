@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -38,8 +39,7 @@ cron.schedule("*/14 * * * * ", () => {
 });
 
 const corsOptions = {
-  origin: "https://monley.netlify.app",
-  // origin: "http://localhost:5173",
+  origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
   credentials: true,
 };
@@ -52,8 +52,11 @@ app.use("/user", customerRouter);
 app.use("/cart", cartRouter);
 app.use("/order", orderRouter);
 
-const PORT = 3000;
+// console.log("process.env.PORT", process.env.PORT);
+// console.log("process.env.FRONTEND_URL", process.env?.FRONTEND_URL);
 
-app.listen(PORT, () => {
-  console.log(`server is running at PORT :http://localhost:${PORT}/items`);
+app.listen(process.env.PORT, () => {
+  console.log(
+    `server is running at PORT :http://localhost:${process.env.PORT}`
+  );
 });
