@@ -8,7 +8,12 @@ const Footer = () => {
         <IoLogoTwitter className="cursor-pointer" />
         <IoLogoInstagram className="cursor-pointer" />
       </div>
-      <p className="font-semibold">@ 2024 All rights reserverd to MONLEY</p>
+      <p className="font-semibold">
+        @Copyright 2024 All rights reserved to
+        <a href="https://github.com/probhask" className="ml-1">
+          https://github.com/probhask
+        </a>
+      </p>
     </div>
   );
 };
