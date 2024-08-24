@@ -84,7 +84,7 @@ const Filter = ({ filterFalse }: FilterProps) => {
             }
           />
           {/* {sort by} */}
-          <FormSelelct
+          <FormSelect
             label="sort by"
             name="order"
             list={["asec", "desc"]}
@@ -94,7 +94,7 @@ const Filter = ({ filterFalse }: FilterProps) => {
             }
           />
           {/* gender */}
-          <FormSelelct
+          <FormSelect
             label="select gender"
             name="gender"
             list={["all", "male", "female"]}
