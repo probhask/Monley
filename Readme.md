@@ -84,14 +84,13 @@ To get started with the Monley E-commerce project, follow these steps:
   ```
 
 - **Backend:**
+  Create .env file and paste this code
+
   In `server.js` file in corsOptions object set origin with the url your react project is running. For example: http://localhost:5173
 
   ```bash
-  const corsOptions = {
-  origin: "http://localhost:5173",
-  methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
-  credentials: true,
-  };
+  FRONTEND_URL=http://localhost:5173
+  PORT=3000
   ```
 
 4. **Run the frontend and baFrontend::**
