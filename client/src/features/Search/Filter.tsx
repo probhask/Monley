@@ -11,7 +11,7 @@ import {
   resetFilterSession,
   setFilterSession,
 } from "../../utils/sessionStorage";
-import { Button, FormSelelct, MultiRange } from "../../components";
+import { Button, FormSelect, MultiRange } from "../../components";
 
 type FilterProps = {
   filterFalse: () => void;
@@ -73,7 +73,7 @@ const Filter = ({ filterFalse }: FilterProps) => {
 
         <div className="grid gap-x-4 gap-y-8 grid-cols-1  text-black justify-center items-center">
           {/* category */}
-          <FormSelelct
+          <FormSelect
             label="select category"
             name="category"
             list={selectCategoryList}
