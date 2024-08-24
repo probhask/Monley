@@ -12,7 +12,7 @@ import {
   // Search,
   Shop,
 } from "./pages";
-import { LoadingSpinner, PageNotFound } from "./components";
+import { ErrorBoundary, LoadingSpinner, PageNotFound } from "./components";
 import { lazy, Suspense } from "react";
 const Search = lazy(() => import("./pages/Search"));
 
@@ -28,7 +28,9 @@ const router = createBrowserRouter([
           </div>
         }
       >
-        <HomeLayout />
+        <ErrorBoundary>
+          <HomeLayout />
+        </ErrorBoundary>
       </Suspense>
     ),
     children: [
